@@ -8,7 +8,12 @@ export default function Home() {
   useEffect(() => {
     const fetchdata = async () => {
       try {
-        const resp = await fetch("/api/words/getAll");
+        const resp = await fetch("/api/words/getAll", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
         const data = await resp.json();
 
         setWordsList(data);

@@ -23,7 +23,7 @@ export default function Home() {
     };
 
     fetchdata();
-  }, [wordsList]);
+  }, []);
 
   return (
     <section className="container m-auto flex gap-5">

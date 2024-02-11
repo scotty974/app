@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import { useRef } from "react";
 import word from "./interface.word";
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextApiRequest, NextApiResponse } from "next/";
 const prisma = new PrismaClient();
 
 export default async function createWords(req: NextApiRequest, res: NextApiResponse) {

@@ -4,10 +4,7 @@ import word from "./interface.word";
 import { NextApiRequest, NextApiResponse } from "next";
 const prisma = new PrismaClient();
 
-export default async function createWords(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function createWords(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.method !== "POST") {
       res.status(405).json({ error: "method not posted" });
@@ -30,3 +27,5 @@ export default async function createWords(
     await prisma.$disconnect();
   }
 }
+
+
